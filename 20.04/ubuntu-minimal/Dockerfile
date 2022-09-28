@@ -1,0 +1,1 @@
+FROM --platform=$TARGETPLATFORM ubuntu:${TAG_MINIMAL}

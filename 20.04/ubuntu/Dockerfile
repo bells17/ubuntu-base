@@ -1,8 +1,8 @@
 ARG TAG_MINIMAL
 
-FROM k8s.gcr.io/pause:3.6
+FROM --platform=$TARGETPLATFORM k8s.gcr.io/pause:3.6
 
-FROM quay.io/cybozu/ubuntu-minimal:${TAG_MINIMAL}
+FROM --platform=$TARGETPLATFORM quay.io/cybozu/ubuntu-minimal:${TAG_MINIMAL}
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \

@@ -1,4 +1,4 @@
-FROM quay.io/cybozu/ubuntu:latest
+FROM --platform=$TARGETPLATFORM quay.io/cybozu/ubuntu:latest
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         build-essential \
